@@ -31,7 +31,7 @@ export default function ElementInfo({
     >
       {({ TransitionProps }) => (
         <Transition {...TransitionProps} timeout={transitionTimeout}>
-          <Paper elevation={10} style={{ width: 200, height: 200 }}>
+          <Paper square elevation={10} style={{ width: 200, height: 200 }}>
             {renderContent()}
             <Typography component="a" onClick={onClose}>Close</Typography>
           </Paper>

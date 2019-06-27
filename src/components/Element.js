@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { styled } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -34,30 +34,33 @@ function getElevation(emphasized, hovered) {
 
 export default function Element({ element, emphasized, onClick }) {
   const [hovered, setHovered] = useState(false);
+  const boxRef = useRef(null);
   const enter = () => setHovered(true);
   const leave = () => setHovered(false);
   const { elevation, zindex } = getElevation(emphasized, hovered);
 
-  function handleClick(event) {
-    if (onClick)
-      onClick(event, element);
+  function handleClick() {
+    if (onClick) {
+      onClick(element, boxRef.current);
+    }
   }
 
   return (
     <Box
+      ref={boxRef}
       square
       onMouseEnter={enter}
       onMouseLeave={leave}
       zindex={zindex}
       elevation={elevation}
       onClick={handleClick}
-      style={{zIndex: zindex}}
+      style={{ zIndex: zindex }}
     >
       <SmallText>{element.number}</SmallText>
       <ElementSymbol>{element.symbol}</ElementSymbol>
       <Stack align="center">
         <SmallText>{element.name}</SmallText>
-        <SmallText>{element.atomic_mass}</SmallText>
+        <SmallText>{+element.atomic_mass.toFixed(4)}</SmallText>
       </Stack>
     </Box>
   )

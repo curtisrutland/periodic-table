@@ -32,18 +32,15 @@ export default function PeriodicTable() {
     setSelected({ anchor, element });
   }
 
-  function handleElementClick(event, element) {
+  function handleElementClick(element, target) {
     console.debug(element);
-    let target = event.target;
     if (selected.anchor == null) {
       onSelected(target, element);
       console.debug("anchor was null, setting.")
     }
     else if (selected.element.number !== element.number) {
       clearSelected();
-      setTimeout(() => {
-        onSelected(target, element);
-      }, TRANSITION_TIMEOUT + 10);
+      setTimeout(() => onSelected(target, element), TRANSITION_TIMEOUT + 10);
       console.debug("new element clicked");
     }
     else {

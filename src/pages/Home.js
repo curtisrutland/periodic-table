@@ -1,9 +1,6 @@
 import React from "react";
 import Page from "components/layout/Page";
-import PeriodicTable from "../components/PeriodicTable";
-// import {elementIndexes} from "api/periodic";
-// import Grid from "components/layout/Grid";
-// import Element from "components/PeriodicTable/Element";
+import PeriodicTable from "../components/PeriodicTable/PeriodicTable";
 
 export default function Home() {
   return (
@@ -12,8 +9,6 @@ export default function Home() {
     </Page>
   )
 }
-
-// console.log(elementIndexes);
 
 export const homeRoute = {
   Component: Home,

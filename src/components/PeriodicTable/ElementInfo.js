@@ -24,7 +24,7 @@ export default function ElementInfo({
     <Popper style={{ zIndex: 100 }} id={id} open={open} anchorEl={anchor} transition disablePortal>
       {({ TransitionProps }) => (
         <Zoom {...TransitionProps} timeout={200}>
-          <Paper style={{ width: 200, height: 200 }}>
+          <Paper elevation={10} style={{ width: 200, height: 200 }}>
             {renderContent()}
             <Typography component="a" onClick={onClose}>Close</Typography>
           </Paper>

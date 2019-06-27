@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/periodic-table/static/css/main.392f7eb2.chunk.css",
-    "main.js": "/periodic-table/static/js/main.4036b921.chunk.js",
-    "main.js.map": "/periodic-table/static/js/main.4036b921.chunk.js.map",
+    "main.js": "/periodic-table/static/js/main.b10b17d2.chunk.js",
+    "main.js.map": "/periodic-table/static/js/main.b10b17d2.chunk.js.map",
     "runtime~main.js": "/periodic-table/static/js/runtime~main.3ed76f66.js",
     "runtime~main.js.map": "/periodic-table/static/js/runtime~main.3ed76f66.js.map",
     "static/js/2.3ad9dd6c.chunk.js": "/periodic-table/static/js/2.3ad9dd6c.chunk.js",
     "static/js/2.3ad9dd6c.chunk.js.map": "/periodic-table/static/js/2.3ad9dd6c.chunk.js.map",
     "index.html": "/periodic-table/index.html",
-    "precache-manifest.6af3c79b7ae9cb304a255820c1c9c672.js": "/periodic-table/precache-manifest.6af3c79b7ae9cb304a255820c1c9c672.js",
+    "precache-manifest.ee76776451bdece3e492d5144f40d299.js": "/periodic-table/precache-manifest.ee76776451bdece3e492d5144f40d299.js",
     "service-worker.js": "/periodic-table/service-worker.js",
     "static/css/main.392f7eb2.chunk.css.map": "/periodic-table/static/css/main.392f7eb2.chunk.css.map"
   }

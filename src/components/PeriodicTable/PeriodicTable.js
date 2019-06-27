@@ -3,6 +3,7 @@ import * as periodic from "api/periodic";
 import Grid from "components/layout/Grid";
 import SearchBox from "./SearchBox";
 import Element from "./Element";
+import ElementInfo from "./ElementInfo";
 
 function mapElements({ x, y, key }, onClick, searchText) {
   const element = periodic.getElement(x, y);
@@ -19,9 +20,38 @@ function mapElements({ x, y, key }, onClick, searchText) {
 
 export default function PeriodicTable() {
   const [searchText, setSearchText] = useState("");
+  const [selected, setSelected] = useState({ anchor: null });
+
+  function clearSelected() {
+    setSelected({ ...selected, anchor: null });
+  }
+
+  function onSelected(anchor, element) {
+    setSelected({ anchor, element });
+  }
 
   function handleElementClick(event, element) {
-    console.log(event.target, element)
+    console.debug(element);
+    let target = event.target;
+    if (selected.anchor == null) {
+      onSelected(target, element);
+      console.debug("anchor was null, setting.")
+    }
+    else if (selected.element.number !== element.number) {
+      clearSelected();
+      setTimeout(() => {
+        onSelected(target, element);
+      }, 220);
+      console.debug("new element clicked");
+    }
+    else {
+      clearSelected();
+      console.debug("same element clicked. clearing");
+    }
+  }
+
+  function handleElementInfoClose() {
+    clearSelected();
   }
 
   return (
@@ -29,6 +59,7 @@ export default function PeriodicTable() {
       <SearchBox value={searchText} onChange={setSearchText} />
       <Grid rows={periodic.Y_MAX} cols={periodic.X_MAX}>
         {periodic.elementIndexes.map(idx => mapElements(idx, handleElementClick, searchText))}
+        <ElementInfo onClose={handleElementInfoClose} {...selected} />
       </Grid>
     </>
   )

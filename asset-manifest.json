@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/curtisrutland/periodic-table/static/css/main.392f7eb2.chunk.css",
-    "main.js": "/curtisrutland/periodic-table/static/js/main.aced8854.chunk.js",
-    "main.js.map": "/curtisrutland/periodic-table/static/js/main.aced8854.chunk.js.map",
-    "runtime~main.js": "/curtisrutland/periodic-table/static/js/runtime~main.480d4be6.js",
-    "runtime~main.js.map": "/curtisrutland/periodic-table/static/js/runtime~main.480d4be6.js.map",
-    "static/js/2.b5954569.chunk.js": "/curtisrutland/periodic-table/static/js/2.b5954569.chunk.js",
-    "static/js/2.b5954569.chunk.js.map": "/curtisrutland/periodic-table/static/js/2.b5954569.chunk.js.map",
-    "index.html": "/curtisrutland/periodic-table/index.html",
-    "precache-manifest.9ccd0c7f93042da79400424120f9ee98.js": "/curtisrutland/periodic-table/precache-manifest.9ccd0c7f93042da79400424120f9ee98.js",
-    "service-worker.js": "/curtisrutland/periodic-table/service-worker.js",
-    "static/css/main.392f7eb2.chunk.css.map": "/curtisrutland/periodic-table/static/css/main.392f7eb2.chunk.css.map"
+    "main.css": "/periodic-table/static/css/main.392f7eb2.chunk.css",
+    "main.js": "/periodic-table/static/js/main.a436f97e.chunk.js",
+    "main.js.map": "/periodic-table/static/js/main.a436f97e.chunk.js.map",
+    "runtime~main.js": "/periodic-table/static/js/runtime~main.3ed76f66.js",
+    "runtime~main.js.map": "/periodic-table/static/js/runtime~main.3ed76f66.js.map",
+    "static/js/2.b5954569.chunk.js": "/periodic-table/static/js/2.b5954569.chunk.js",
+    "static/js/2.b5954569.chunk.js.map": "/periodic-table/static/js/2.b5954569.chunk.js.map",
+    "index.html": "/periodic-table/index.html",
+    "precache-manifest.7d05869e6349700933131765de8d594e.js": "/periodic-table/precache-manifest.7d05869e6349700933131765de8d594e.js",
+    "service-worker.js": "/periodic-table/service-worker.js",
+    "static/css/main.392f7eb2.chunk.css.map": "/periodic-table/static/css/main.392f7eb2.chunk.css.map"
   }
 }

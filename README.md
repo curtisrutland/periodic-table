@@ -1,3 +1,9 @@
+# Material-UI Periodic Table
+
+[View Live Demo](https://curtisrutland.github.io/periodic-table/)
+
+# Create-React-App Original Documentation Below
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

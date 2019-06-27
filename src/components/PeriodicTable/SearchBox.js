@@ -11,6 +11,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import LightbulbFullIcon from "components/icons/LightbulbFull";
 import LightbulbOutlineIcon from "components/icons/LightbulbOutline";
+import GithubIcon from "components/icons/Github";
 import { useThemeToggle } from "providers/ThemeToggleProvider";
 
 const useStyles = makeStyles({
@@ -93,6 +94,12 @@ export default function SearchBox({ value, onChange }) {
       >
         <MenuItem disabled>
           <ListItemText primary={process.env.REACT_APP_MENU_TITLE} secondary={`v${process.env.REACT_APP_VERSION}`} />
+        </MenuItem>
+        <MenuItem component="a" target="_blank" onClick={handleMenuClose} href={process.env.REACT_APP_PROJECT_URL}>
+          <ListItemIcon>
+            <GithubIcon />
+          </ListItemIcon>
+          <ListItemText primary="View Project" />
         </MenuItem>
         <MenuItem onClick={handleToggleTheme}>
           <ListItemIcon>

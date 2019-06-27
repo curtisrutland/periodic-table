@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 import AppProvider from "providers/AppProvider";
 import Pages from "pages";
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 ReactDOM.render((
   <AppProvider>

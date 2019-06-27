@@ -1,11 +1,9 @@
 import React from "react";
 import { Router } from "@reach/router";
 import { homeRoute } from "./Home";
-import { testRoute } from "./Test";
 
 export const ROUTES = [
-  homeRoute,
-  testRoute
+  homeRoute
 ]
 
 function mapRoutes(route) {

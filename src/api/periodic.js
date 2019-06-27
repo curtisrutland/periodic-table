@@ -11,6 +11,15 @@ export function getElement(x, y) {
   return elementMap.get(x).get(y);
 }
 
+export function match(element, searchText = "") {
+  let s = searchText.trim().toLowerCase();
+  if(s === "") 
+    return false;
+  return element.name.toLowerCase().indexOf(s) >= 0
+    || element.symbol.toLowerCase().indexOf(s) >= 0
+    || element.number.toString() === s;
+}
+
 function initializeElementMap() {
   for (let i = 1; i <= X_MAX; i++) {
     elementMap.set(i, new Map());

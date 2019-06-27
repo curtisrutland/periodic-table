@@ -16,7 +16,7 @@ const Box = styled(Paper)(({ zindex }) => ({
 }));
 
 const ElementSymbol = styled(Typography)({
-  fontSize: "2vw"
+  fontSize: "1.5rem"
 });
 
 const SmallText = styled(Typography)({
@@ -24,14 +24,20 @@ const SmallText = styled(Typography)({
 });
 
 const DEFAULT_ZINDEX = 0, DEFAULT_ELEVATION = 0;
-const HOVERED_ZINDEX = 1, HOVERED_ELEVATION = 10;
+const EMPHASIZED_ZINDEX = 1, EMPHASIZED_ELEVATION = 7;
+const HOVERED_ZINDEX = 2, HOVERED_ELEVATION = 12;
+
+function getElevation(emphasized, hovered) {
+  if (hovered) return { zindex: HOVERED_ZINDEX, elevation: HOVERED_ELEVATION };
+  if (emphasized) return { zindex: EMPHASIZED_ZINDEX, elevation: EMPHASIZED_ELEVATION };
+  return { zindex: DEFAULT_ZINDEX, elevation: DEFAULT_ELEVATION };
+}
 
 export default function Element({ element, emphasized, onClick }) {
   const [hovered, setHovered] = useState(false);
   const enter = () => setHovered(true);
   const leave = () => setHovered(false);
-  const zindex = (hovered || emphasized) ? HOVERED_ZINDEX : DEFAULT_ZINDEX;
-  const elevation = (hovered || emphasized) ? HOVERED_ELEVATION : DEFAULT_ELEVATION;
+  const { elevation, zindex } = getElevation(emphasized, hovered);
 
   function handleClick(event) {
     if (onClick)

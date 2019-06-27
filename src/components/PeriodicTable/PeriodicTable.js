@@ -5,6 +5,8 @@ import SearchBox from "./SearchBox";
 import Element from "./Element";
 import ElementInfo from "./ElementInfo";
 
+const TRANSITION_TIMEOUT = 150;
+
 function mapElements({ x, y, key }, onClick, searchText) {
   const element = periodic.getElement(x, y);
   if (!element) {
@@ -41,7 +43,7 @@ export default function PeriodicTable() {
       clearSelected();
       setTimeout(() => {
         onSelected(target, element);
-      }, 220);
+      }, TRANSITION_TIMEOUT + 10);
       console.debug("new element clicked");
     }
     else {
@@ -59,7 +61,7 @@ export default function PeriodicTable() {
       <SearchBox value={searchText} onChange={setSearchText} />
       <Grid rows={periodic.Y_MAX} cols={periodic.X_MAX}>
         {periodic.elementIndexes.map(idx => mapElements(idx, handleElementClick, searchText))}
-        <ElementInfo onClose={handleElementInfoClose} {...selected} />
+        <ElementInfo onClose={handleElementInfoClose} {...selected} transitionTimeout={TRANSITION_TIMEOUT} />
       </Grid>
     </>
   )

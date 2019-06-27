@@ -1,25 +1,21 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import HomeIcon from "@material-ui/icons/Home";
 import Page from "components/layout/Page";
-import LinkButton from "components/LinkButton";
-import { useThemeToggle } from "providers/ThemeToggleProvider";
-import { testRoute } from "./Test";
+import PeriodicTable from "../components/PeriodicTable";
+// import {elementIndexes} from "api/periodic";
+// import Grid from "components/layout/Grid";
+// import Element from "components/PeriodicTable/Element";
 
 export default function Home() {
-  const { toggleTheme } = useThemeToggle();
   return (
     <Page>
-      <Typography>Hello World</Typography>
-      <LinkButton variant="contained" to={testRoute.path} color="secondary">Go To Example Page</LinkButton>
-      <Button variant="outlined" color="primary" onClick={toggleTheme}>Toggle Theme</Button>
+      <PeriodicTable />
     </Page>
   )
 }
 
+// console.log(elementIndexes);
+
 export const homeRoute = {
-  Icon: HomeIcon,
   Component: Home,
   path: "/",
   name: "Home",

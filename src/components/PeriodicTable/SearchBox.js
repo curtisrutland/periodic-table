@@ -44,6 +44,7 @@ export default function SearchBox({ value, onChange }) {
 
   function handleClear() {
     onChange("");
+    focusInput();
   }
 
   function handleMenuClick(event) {
@@ -59,12 +60,14 @@ export default function SearchBox({ value, onChange }) {
     handleMenuClose();
   }
 
+  function focusInput() {
+    inputRef.current.focus();
+  }
+
   const ThemeIcon = theme === "light" ? LightbulbOutlineIcon : LightbulbFullIcon;
   const themeText = `Use ${theme === "light" ? "dark" : "light"} theme`;
 
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  useEffect(focusInput, []);
 
   return (
     <Paper square className={classes.root}>

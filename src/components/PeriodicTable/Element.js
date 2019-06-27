@@ -4,16 +4,15 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { Stack } from "components/layout/Flex";
 
-const Box = styled(Paper)(({ zindex }) => ({
+const Box = styled(Paper)({
   display: "flex",
   flexFlow: "column nowrap",
   justifyContent: "space-between",
   alignItems: "center",
   padding: 4,
-  zIndex: zindex,
   flexGrow: 1,
   cursor: "pointer"
-}));
+});
 
 const ElementSymbol = styled(Typography)({
   fontSize: "1.5rem"
@@ -52,6 +51,7 @@ export default function Element({ element, emphasized, onClick }) {
       zindex={zindex}
       elevation={elevation}
       onClick={handleClick}
+      style={{zIndex: zindex}}
     >
       <SmallText>{element.number}</SmallText>
       <ElementSymbol>{element.symbol}</ElementSymbol>

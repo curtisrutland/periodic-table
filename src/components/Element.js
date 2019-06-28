@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { styled } from "@material-ui/styles";
+import { styled, useTheme } from "@material-ui/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { Stack } from "components/layout/Flex";
@@ -34,6 +34,7 @@ function getElevation(emphasized, hovered) {
 
 export default function Element({ element, emphasized, onClick }) {
   const [hovered, setHovered] = useState(false);
+  const theme = useTheme();
   const boxRef = useRef(null);
   const enter = () => setHovered(true);
   const leave = () => setHovered(false);
@@ -54,7 +55,7 @@ export default function Element({ element, emphasized, onClick }) {
       zindex={zindex}
       elevation={elevation}
       onClick={handleClick}
-      style={{ zIndex: zindex }}
+      style={{ zIndex: zindex, color: emphasized ? theme.palette.emphasized : "unset" }}
     >
       <SmallText>{element.number}</SmallText>
       <ElementSymbol>{element.symbol}</ElementSymbol>

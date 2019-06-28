@@ -1,6 +1,8 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 import blue from "@material-ui/core/colors/blue";
-import deepOrange from "@material-ui/core/colors/deepOrange"
+import deepOrange from "@material-ui/core/colors/deepOrange";
+// import red from "@material-ui/core/colors/red";
+import lime from "@material-ui/core/colors/lime";
 
 const palette = {
   primary: blue,
@@ -14,7 +16,8 @@ const typography = {
 export const lightTheme = createMuiTheme({
   palette: {
     ...palette,
-    type: "light"
+    type: "light",
+    emphasized: deepOrange["A400"]
   },
   typography
 });
@@ -22,7 +25,8 @@ export const lightTheme = createMuiTheme({
 export const darkTheme = createMuiTheme({
   palette: {
     ...palette,
-    type: "dark"
+    type: "dark",
+    emphasized: lime["A200"]
   },
   typography
 });

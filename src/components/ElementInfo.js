@@ -1,8 +1,14 @@
 import React from 'react';
+import { styled } from "@material-ui/styles"; 
 import Popper from '@material-ui/core/Popper';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Transition from '@material-ui/core/Zoom';
+
+const Box = styled(Paper)({
+  width: "30vw",
+  height: "20vh"
+});
 
 export default function ElementInfo({
   element,
@@ -31,10 +37,10 @@ export default function ElementInfo({
     >
       {({ TransitionProps }) => (
         <Transition {...TransitionProps} timeout={transitionTimeout}>
-          <Paper square elevation={10} style={{ width: 200, height: 200 }}>
+          <Box square elevation={10}>
             {renderContent()}
             <Typography component="a" onClick={onClose}>Close</Typography>
-          </Paper>
+          </Box>
         </Transition>
       )}
     </Popper>

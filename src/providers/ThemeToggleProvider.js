@@ -11,7 +11,6 @@ export function ThemeToggleProvider({ children }) {
 
   function toggleTheme() {
     const newTheme = theme === "light" ? "dark" : "light";
-    console.debug(`toggle theme: ${newTheme}`);
     storage.theme.set(newTheme);
     setTheme(newTheme);
   }

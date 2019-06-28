@@ -6,8 +6,8 @@ import Paper from '@material-ui/core/Paper';
 import Transition from '@material-ui/core/Zoom';
 
 const Box = styled(Paper)({
-  width: "30vw",
-  height: "20vh"
+  width: "50vw",
+  height: "35vh"
 });
 
 export default function ElementInfo({

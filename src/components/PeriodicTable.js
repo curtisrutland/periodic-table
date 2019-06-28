@@ -3,7 +3,7 @@ import * as periodic from "api/periodic";
 import Grid from "components/layout/Grid";
 import SearchBox from "./SearchBox";
 import Element from "./Element";
-import ElementInfo from "./ElementInfo";
+import ElementInfoWindow from "./ElementInfoWindow";
 
 const TRANSITION_TIMEOUT = 150;
 
@@ -55,7 +55,7 @@ export default function PeriodicTable() {
       <SearchBox value={searchText} onChange={setSearchText} />
       <Grid rows={periodic.Y_MAX} cols={periodic.X_MAX}>
         {periodic.elementIndexes.map(idx => mapElements(idx, handleElementClick, searchText))}
-        <ElementInfo onClose={handleElementInfoClose} {...selected} transitionTimeout={TRANSITION_TIMEOUT} />
+        <ElementInfoWindow onClose={handleElementInfoClose} {...selected} transitionTimeout={TRANSITION_TIMEOUT} />
       </Grid>
     </>
   )

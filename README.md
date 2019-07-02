@@ -1,6 +1,6 @@
 # Material-UI Periodic Table
 
-[View Live Demo](https://curtisrutland.github.io/periodic-table/)
+See it in action at [https://periodictable.dev](https://periodictable.dev/)
 
 # Create-React-App Original Documentation Below
 
